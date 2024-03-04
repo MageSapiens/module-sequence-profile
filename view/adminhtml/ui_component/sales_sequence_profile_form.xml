@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">sales_sequence_profile_form.sales_sequence_profile_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Sales Increment ID Profile</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <namespace>sales_sequence_profile_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>sales_sequence_profile_form.sales_sequence_profile_form_data_source</dep>
+        </deps>
+        <buttons>
+            <button name="saveButton" class="Sapiens\OrderPrefix\Block\Adminhtml\Form\SaveButton"/>
+            <button name="backButton" class="Sapiens\OrderPrefix\Block\Adminhtml\Form\BackButton"/>
+        </buttons>
+    </settings>
+    <dataSource name="sales_sequence_profile_form_data_source" component="Magento_Ui/js/form/provider">
+        <settings>
+            <submitUrl path="order_prefix/profile/save"/>
+        </settings>
+        <dataProvider class="Sapiens\OrderPrefix\Ui\Component\Form\ProfileDataProvider" name="sales_sequence_profile_form_data_source">
+            <settings>
+                <requestFieldName>profile_id</requestFieldName>
+                <primaryFieldName>profile_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general" sortOrder="10">
+        <settings>
+            <label translate="true">General</label>
+        </settings>
+        <field name="profile_id" sortOrder="0" formElement="hidden">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">profile</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Profile ID</label>
+                <dataScope>profile_id</dataScope>
+            </settings>
+        </field>
+        <field name="prefix" sortOrder="10" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">profile</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Prefix</label>
+                <dataScope>prefix</dataScope>
+            </settings>
+        </field>
+        <field name="suffix" sortOrder="20" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">profile</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Suffix</label>
+                <dataScope>suffix</dataScope>
+            </settings>
+        </field>
+        <field name="start_value" sortOrder="30" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">profile</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Start Value</label>
+                <dataScope>start_value</dataScope>
+            </settings>
+        </field>
+        <field name="step" sortOrder="40" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">profile</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Step</label>
+                <dataScope>step</dataScope>
+            </settings>
+        </field>
+    </fieldset>
+</form>

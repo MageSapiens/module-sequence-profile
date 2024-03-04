@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Sapiens_OrderPrefix::sales_sequence_profile" title="Sales Increment ID Prefix"/>
+                <resource id="Sapiens_OrderPrefix::sales_sequence_profile_edit"
+                          title="Sales Increment ID Profile Edit"/>
+            </resource>
+        </resources>
+    </acl>
+</config>
