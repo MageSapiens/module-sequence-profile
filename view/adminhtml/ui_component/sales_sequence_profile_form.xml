@@ -15,15 +15,15 @@
             <dep>sales_sequence_profile_form.sales_sequence_profile_form_data_source</dep>
         </deps>
         <buttons>
-            <button name="saveButton" class="Sapiens\OrderPrefix\Block\Adminhtml\Form\SaveButton"/>
-            <button name="backButton" class="Sapiens\OrderPrefix\Block\Adminhtml\Form\BackButton"/>
+            <button name="saveButton" class="Sapiens\SequenceProfile\Block\Adminhtml\Form\SaveButton"/>
+            <button name="backButton" class="Sapiens\SequenceProfile\Block\Adminhtml\Form\BackButton"/>
         </buttons>
     </settings>
     <dataSource name="sales_sequence_profile_form_data_source" component="Magento_Ui/js/form/provider">
         <settings>
             <submitUrl path="order_prefix/profile/save"/>
         </settings>
-        <dataProvider class="Sapiens\OrderPrefix\Ui\Component\Form\ProfileDataProvider" name="sales_sequence_profile_form_data_source">
+        <dataProvider class="Sapiens\SequenceProfile\Ui\Component\Form\ProfileDataProvider" name="sales_sequence_profile_form_data_source">
             <settings>
                 <requestFieldName>profile_id</requestFieldName>
                 <primaryFieldName>profile_id</primaryFieldName>

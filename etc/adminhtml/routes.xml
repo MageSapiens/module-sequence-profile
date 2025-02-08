@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="admin">
         <route id="order_prefix" frontName="order_prefix">
-            <module name="Sapiens_OrderPrefix"/>
+            <module name="Sapiens_SequenceProfile"/>
         </route>
     </router>
 </config>

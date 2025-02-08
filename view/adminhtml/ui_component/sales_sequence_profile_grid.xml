@@ -15,12 +15,12 @@
     <dataSource name="sales_sequence_profile_grid_data_source" component="Magento_Ui/js/grid/provider">
         <settings>
             <storageConfig>
-                <param name="indexField" xsi:type="string">entity_id</param>
+                <param name="indexField" xsi:type="string">profile_id</param>
             </storageConfig>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <aclResource>Sapiens_OrderPrefix::sales_sequence_profile</aclResource>
-        <dataProvider class="Magento\Cms\Ui\Component\DataProvider" name="sales_sequence_profile_grid_data_source">
+        <aclResource>Sapiens_SequenceProfile::sales_sequence_profile</aclResource>
+        <dataProvider class="\Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider" name="sales_sequence_profile_grid_data_source">
             <settings>
                 <requestFieldName>profile_id</requestFieldName>
                 <primaryFieldName>profile_id</primaryFieldName>
@@ -32,35 +32,22 @@
             <sticky>true</sticky>
         </settings>
         <bookmark name="bookmarks"/>
-        <filters name="listing_filters">
-            <settings>
-                <templates>
-                    <filters>
-                        <select>
-                            <param name="template" xsi:type="string">ui/grid/filters/elements/ui-select</param>
-                            <param name="component" xsi:type="string">Magento_Ui/js/form/element/ui-select</param>
-                        </select>
-                    </filters>
-                </templates>
-            </settings>
-        </filters>
         <paging name="listing_paging"/>
     </listingToolbar>
     <columns name="sales_sequence_profile_grid_columns">
         <column name="profile_id">
             <settings>
-                <label translate="true">ID</label>
+                <label translate="true">Profile ID</label>
             </settings>
         </column>
-        <column name="meta_id" component="Magento_Ui/js/grid/columns/select">
+        <column name="profile">
             <settings>
-                <options class="Sapiens\OrderPrefix\Model\Profile\Source\Sequence"/>
-                <filter>select</filter>
-                <editor>
-                    <editorType>select</editorType>
-                </editor>
-                <dataType>select</dataType>
-                <label translate="true">Entity Type</label>
+                <label translate="true">Sequence Profile</label>
+            </settings>
+        </column>
+        <column name="scope" class="Sapiens\SequenceProfile\Ui\Component\Listing\Column\Scope">
+            <settings>
+                <label translate="true">Scope</label>
             </settings>
         </column>
         <column name="prefix">
@@ -83,9 +70,9 @@
                 <label translate="true">Step</label>
             </settings>
         </column>
-        <actionsColumn name="actions" class="Sapiens\OrderPrefix\Ui\Component\Listing\Column\ProfileActions">
+        <actionsColumn name="actions" class="Sapiens\SequenceProfile\Ui\Component\Listing\Column\ProfileActions">
             <settings>
-                <indexField>block_id</indexField>
+                <indexField>profile_id</indexField>
             </settings>
         </actionsColumn>
     </columns>

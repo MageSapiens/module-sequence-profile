@@ -7,13 +7,13 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Sapiens_OrderPrefix::sales_sequence_profile"
-             parent="Sapiens_Core::sapiens"
-             title="Sales Increment ID Prefix"
+        <add id="Sapiens_SequenceProfile::sales_sequence_profile"
+             parent="Magento_Backend::stores_settings"
+             title="Sales Sequence Profile Manager"
              translate="title"
-             module="Sapiens_OrderPrefix"
+             module="Sapiens_SequenceProfile"
              action="order_prefix/profile/index"
-             sortOrder="0"
-             resource="Sapiens_OrderPrefix::sales_sequence_profile"/>
+             sortOrder="100"
+             resource="Sapiens_SequenceProfile::sales_sequence_profile"/>
     </menu>
 </config>

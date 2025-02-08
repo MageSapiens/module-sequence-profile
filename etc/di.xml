@@ -6,7 +6,7 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <virtualType name="Sapiens\OrderPrefix\Model\ResourceModel\SequenceProfile\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <virtualType name="Sapiens\SequenceProfile\Model\ResourceModel\SequenceProfile\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">sales_sequence_profile</argument>
             <argument name="resourceModel" xsi:type="string">Magento\SalesSequence\Model\ResourceModel\Profile</argument>
@@ -15,7 +15,7 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item xsi:type="string" name="sales_sequence_profile_grid_data_source">Sapiens\OrderPrefix\Model\ResourceModel\SequenceProfile\Grid\Collection</item>
+                <item xsi:type="string" name="sales_sequence_profile_grid_data_source">Sapiens\SequenceProfile\Model\ResourceModel\SequenceProfile\Grid\Collection</item>
             </argument>
         </arguments>
     </type>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sapiens\OrderPrefix\Block\Adminhtml\Form;
+namespace Sapiens\SequenceProfile\Block\Adminhtml\Form;
 
 use Magento\Cms\Block\Adminhtml\Block\Edit\GenericButton;
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;

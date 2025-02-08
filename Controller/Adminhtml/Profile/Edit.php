@@ -1,28 +1,26 @@
 <?php
 
-namespace Sapiens\OrderPrefix\Controller\Adminhtml\Profile;
+namespace Sapiens\SequenceProfile\Controller\Adminhtml\Profile;
 
 use Magento\Backend\App\Action;
 use Magento\Framework\App\Action\HttpGetActionInterface;
-use Magento\Framework\App\ResponseInterface;
+use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Controller\ResultInterface;
-use Magento\Framework\Exception\NotFoundException;
 
 class Edit extends Action implements HttpGetActionInterface
 {
     /**
      * Authorization level of a basic admin session
      */
-    public const ADMIN_RESOURCE = 'Sapiens_OrderPrefix::sales_sequence_profile_edit';
+    public const ADMIN_RESOURCE = 'Sapiens_SequenceProfile::sales_sequence_profile';
 
     /**
      * Execute action based on request and return result
      *
-     * @return ResultInterface|ResponseInterface
-     * @throws NotFoundException
+     * @return ResultInterface
      */
     public function execute()
     {
-        return $this->resultFactory->create(\Magento\Framework\Controller\ResultFactory::TYPE_PAGE);
+        return $this->resultFactory->create(ResultFactory::TYPE_PAGE);
     }
 }

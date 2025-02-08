@@ -1,6 +1,6 @@
 <?php
 
-namespace Sapiens\OrderPrefix\Model\ResourceModel\Meta;
+namespace Sapiens\SequenceProfile\Model\ResourceModel\Meta;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 use Magento\SalesSequence\Model\Meta;

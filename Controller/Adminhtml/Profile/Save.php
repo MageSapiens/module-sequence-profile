@@ -1,6 +1,6 @@
 <?php
 
-namespace Sapiens\OrderPrefix\Controller\Adminhtml\Profile;
+namespace Sapiens\SequenceProfile\Controller\Adminhtml\Profile;
 
 use Magento\Backend\App\Action;
 use Magento\Framework\App\Action\HttpPostActionInterface;
@@ -13,7 +13,7 @@ class Save extends Action implements HttpPostActionInterface
     /**
      * Authorization level of a basic admin session
      */
-    public const ADMIN_RESOURCE = 'Sapiens_OrderPrefix::sales_sequence_profile_edit';
+    public const ADMIN_RESOURCE = 'Sapiens_SequenceProfile::sales_sequence_profile_edit';
 
     /**
      * Execute action based on request and return result

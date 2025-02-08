@@ -1,11 +1,11 @@
 {
-  "name": "sapiens/module-order-prefix",
+  "name": "sapiens/module-sequence-profile",
   "version": "1.0.0",
-  "description": "N/A",
+  "description": "Sapiens Sequence Profile Manager",
   "type": "magento2-module",
   "require": {
     "magento/framework": "*",
-    "magento/module-sales": "103.0.*"
+    "magento/module-sales": "*"
   },
   "license": [
     "Proprietary"
@@ -15,7 +15,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "Sapiens\\OrderPrefix\\": ""
+      "Sapiens\\SequenceProfile\\": ""
     }
   }
 }

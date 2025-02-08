@@ -1,6 +1,6 @@
 <?php
 
-namespace Sapiens\OrderPrefix\Model\ResourceModel\Profile;
+namespace Sapiens\SequenceProfile\Model\ResourceModel\Profile;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 use Magento\SalesSequence\Model\Profile;

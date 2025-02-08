@@ -1,10 +1,10 @@
 <?php
 
-namespace Sapiens\OrderPrefix\Ui\Component\Form;
+namespace Sapiens\SequenceProfile\Ui\Component\Form;
 
 use Magento\Cms\Model\Block;
-use Sapiens\OrderPrefix\Model\ResourceModel\Profile\Collection;
-use Sapiens\OrderPrefix\Model\ResourceModel\Profile\CollectionFactory;
+use Sapiens\SequenceProfile\Model\ResourceModel\Profile\Collection;
+use Sapiens\SequenceProfile\Model\ResourceModel\Profile\CollectionFactory;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Ui\DataProvider\Modifier\PoolInterface;
 use Magento\Ui\DataProvider\ModifierPoolDataProvider;

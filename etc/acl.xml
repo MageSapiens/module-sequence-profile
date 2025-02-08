@@ -4,9 +4,7 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Sapiens_OrderPrefix::sales_sequence_profile" title="Sales Increment ID Prefix"/>
-                <resource id="Sapiens_OrderPrefix::sales_sequence_profile_edit"
-                          title="Sales Increment ID Profile Edit"/>
+                <resource id="Sapiens_SequenceProfile::sales_sequence_profile" title="Sales Sequence Profile Manager"/>
             </resource>
         </resources>
     </acl>
